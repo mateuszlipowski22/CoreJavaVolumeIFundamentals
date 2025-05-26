@@ -31,4 +31,9 @@ class Employee {
         salary+=raise;
 
     }
+
+    @Override
+    public String toString() {
+        return "name="+this.getName()+", salary="+this.getSalary()+", hireDay="+this.getHireDay();
+    }
 }

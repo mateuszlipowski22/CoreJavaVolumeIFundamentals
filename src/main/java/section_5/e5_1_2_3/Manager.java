@@ -4,9 +4,9 @@ public class Manager extends Employee{
 
     private double bonus;
 
-    public Manager(String name, double salary, int year, int month, int day, double bonus) {
+    public Manager(String name, double salary, int year, int month, int day) {
         super(name, salary, year, month, day);
-        this.bonus = bonus;
+        this.bonus = 0;
     }
 
     public double getBonus() {
@@ -15,5 +15,11 @@ public class Manager extends Employee{
 
     public void setBonus(double bonus) {
         this.bonus = bonus;
+    }
+
+    @Override
+    public double getSalary() {
+        double baseSalary =  super.getSalary();
+        return baseSalary+bonus;
     }
 }
